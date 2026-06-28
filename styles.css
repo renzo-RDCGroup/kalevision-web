@@ -300,3 +300,8 @@ h1,h2,h3,h4{font-family:var(--display);line-height:1.12;letter-spacing:-.02em;fo
 .socials a{font-weight:700;font-size:.82rem;letter-spacing:.02em}
 
 .burger svg{width:24px;height:24px}
+
+/* Official isotipo logo */
+.brand__iso{display:inline-flex;align-items:center}
+.brand__iso svg{width:38px;height:30px;display:block}
+.brand{gap:9px}
