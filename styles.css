@@ -229,8 +229,24 @@ h1,h2,h3,h4{font-family:var(--display);line-height:1.12;letter-spacing:-.02em;fo
 .socials a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:#fff}
 .socials a:hover{background:var(--grad-bright);color:var(--navy)}
 
-/* Floating AI assistant */
-.fab{position:fixed;bottom:24px;right:24px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--grad-bright);color:var(--navy);border:none;display:grid;place-items:center;font-size:1.5rem;cursor:pointer;box-shadow:0 14px 34px -10px rgba(0,194,255,.7);animation:pulse 2.4s infinite}
+/* Floating widget */
+.fab{position:fixed;bottom:24px;right:24px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--grad-bright);color:var(--navy);border:none;display:grid;place-items:center;font-size:1.5rem;cursor:pointer;box-shadow:0 14px 34px -10px rgba(0,194,255,.7);animation:pulse 2.4s infinite;text-decoration:none}
+.fab--wa{background:#25D366;color:#fff;box-shadow:0 14px 34px -10px rgba(37,211,102,.65)}
+.fab--wa svg{width:34px;height:34px}
+.fab__label{position:fixed;bottom:35px;right:98px;z-index:60;background:#fff;color:var(--navy);font-weight:600;font-size:.85rem;padding:8px 14px;border-radius:999px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-100)}
+@media(max-width:600px){.fab__label{display:none}}
+
+/* Real logo mark */
+.brand__dot svg{width:20px;height:20px}
+
+/* Partners / social proof */
+.partners{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:stretch}
+.partner{background:#fff;border:1px solid var(--gray-100);border-radius:16px;padding:20px 24px;display:flex;flex-direction:column;align-items:center;gap:8px;min-width:170px;box-shadow:var(--shadow-sm);transition:.25s transform}
+.partner:hover{transform:translateY(-4px)}
+.partner .pmark{width:46px;height:46px;border-radius:12px;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:800;font-family:var(--display);font-size:1.2rem}
+.partner .pname{font-family:var(--display);font-weight:800;color:var(--navy);font-size:1rem;text-align:center;line-height:1.2}
+.partner .ptype{font-size:.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.product__img img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* Reveal on scroll */
 .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
