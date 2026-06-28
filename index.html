@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalevisión — Lentes europeos PRATS para ópticas y pacientes en Perú</title>
+<meta name="description" content="Kalevisión es el socio estratégico de PRATS en Perú: lentes oftálmicas de calidad europea, fabricación 100% robotizada y crecimiento impulsado por IA para ópticas y pacientes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="brand"><span class="brand__dot">◎</span>Kale<span>visión</span></a>
+    <nav class="navlinks" id="nav">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="opticas.html">Para ópticas</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="nav__cta">
+      <button class="btn cart-btn btn--outline" onclick="Cart.open()">🛒<span class="cart-count">0</span></button>
+      <a href="contacto.html" class="btn btn--primary">Habla con un asesor</a>
+      <button class="burger" onclick="toggleNav()">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="reveal in">
+      <span class="badge">⚡ Socio estratégico oficial de PRATS en Perú</span>
+      <h1>Lentes europeos de precisión, <em>impulsados por inteligencia artificial</em></h1>
+      <p class="lead">Fabricación 100% robotizada de PRATS y tecnología de IA para que las ópticas vendan más y los pacientes vean mejor. Una nueva forma de mirar el futuro.</p>
+      <div class="hero__cta">
+        <a href="opticas.html" class="btn btn--primary">Soy óptica / profesional</a>
+        <a href="tienda.html" class="btn btn--ghost">Quiero mis lentes</a>
+      </div>
+      <div class="hero__stats">
+        <div><div class="n">+4.000</div><div class="l">ópticas independientes en Perú</div></div>
+        <div><div class="n">100%</div><div class="l">producción robotizada PRATS</div></div>
+        <div><div class="n">0,01</div><div class="l">dioptría de precisión</div></div>
+      </div>
+    </div>
+    <div class="reveal in">
+      <div class="glass chatdemo">
+        <div class="chatdemo__head"><span class="pulse"></span> Asistente IA de Kalevisión · en línea 24/7</div>
+        <div class="bubble bubble--bot">¡Hola! 👋 ¿Buscas lentes para ti o eres una óptica que quiere crecer?</div>
+        <div class="bubble bubble--user">Tengo una óptica en provincia</div>
+        <div class="bubble bubble--bot">Perfecto. Te conecto con tu asesor PRATS y te muestro cómo automatizar tus pedidos y captar más pacientes. 🚀</div>
+        <div class="bubble bubble--user">¿Y la entrega?</div>
+        <div class="bubble bubble--bot">Pedido a fábrica 100% automatizado: del encargo a tu local sin fricción. ✨</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HYBRID PATHS -->
+<section class="container" style="margin-bottom:96px">
+  <div class="paths">
+    <div class="pathcard reveal">
+      <div class="ico" style="background:linear-gradient(120deg,#0A1F44,#123A82);color:#fff">🏪</div>
+      <h3>Para ópticas y profesionales</h3>
+      <p>Convierte tu óptica en un negocio que crece solo: lentes PRATS de calidad europea, pedidos automatizados y marketing con IA que te trae pacientes.</p>
+      <a href="opticas.html" class="link">Quiero hacer crecer mi óptica →</a>
+    </div>
+    <div class="pathcard reveal">
+      <div class="ico" style="background:linear-gradient(120deg,#00C2FF,#19E3C2);color:#0A1F44">👓</div>
+      <h3>Para pacientes</h3>
+      <p>Encuentra tus lentes ideales con nuestro recomendador de IA, cómpralos online o recógelos en tienda. Tecnología europea al alcance de todos.</p>
+      <a href="tienda.html" class="link">Quiero mis lentes →</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE (real imagery) -->
+<section class="section section--tight">
+  <div class="container split">
+    <div class="reveal">
+      <div class="photoframe">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33CwvQIktHoBixUc2OshA9kXUz0/hf_20260628_183950_939757ad-75f1-45ef-88c2-022b6b910408.png" alt="Paciente probándose lentes en óptica" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Una experiencia cercana</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.4rem);color:var(--navy);margin:14px 0 16px">Tecnología de punta, trato humano</h2>
+      <p class="muted">Detrás de cada lente hay una persona que quiere ver mejor. Combinamos la precisión europea de PRATS con una atención cálida y cercana, en tienda y online. Así se siente elegir tus lentes con Kalevisión.</p>
+      <div class="pilllist">
+        <span class="pill">😊 Atención personalizada</span><span class="pill">🏪 Tienda en San Isidro</span><span class="pill">🚚 Envíos a todo el Perú</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PRATS -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="shead center reveal">
+      <span class="eyebrow">Tecnología PRATS</span>
+      <h2>Calidad europea, fabricada por robots</h2>
+      <p>PRATS automatizó por completo su producción en Europa. Desde el pedido hasta la entrega, todo es robotizado: más precisión, menos errores y plazos que ninguna óptica independiente puede igualar sola.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card reveal"><div class="ico">🎯</div><h3>Vimax SE</h3><p>Progresivas calculadas a la centésima de dioptría con diseño personalizado en el momento del pedido.</p></div>
+      <div class="card reveal"><div class="ico">🧠</div><h3>Vimax Adaptative</h3><p>Lente que usa datos del usuario para adaptarse automáticamente a cada persona. IA aplicada a la visión.</p></div>
+      <div class="card reveal"><div class="ico">👶</div><h3>MYOP / Defocus Kids</h3><p>Control de miopía infantil con microlentes de desenfoque periférico, tecnología exclusiva PRATS.</p></div>
+      <div class="card reveal"><div class="ico">🛡️</div><h3>Protección total</h3><p>Antirreflejo ultrarresistente y protección UV al 100% en toda la gama.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AI ADVANTAGE -->
+<section class="section" style="background:var(--paper)">
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">La ventaja Kalevisión</span>
+      <h2>No solo vendemos lentes. Hacemos crecer tu negocio con IA.</h2>
+      <p class="muted">El mercado óptico peruano mueve más de US$ 295 millones y crece cada año, pero las ópticas independientes pelean solas contra cadenas como GMO. Nosotros nivelamos la cancha con tecnología.</p>
+      <ul class="checklist">
+        <li><span class="tick">✓</span> <b>Contenido automático:</b> publicaciones para redes generadas y programadas con IA, sin que muevas un dedo.</li>
+        <li><span class="tick">✓</span> <b>Captura de leads 24/7:</b> chatbot y formularios que llenan tu CRM automáticamente.</li>
+        <li><span class="tick">✓</span> <b>Recomendador inteligente:</b> ayuda al paciente a elegir y aumenta el ticket promedio.</li>
+        <li><span class="tick">✓</span> <b>Pedidos sin fricción:</b> integración directa con la fábrica robotizada de PRATS.</li>
+      </ul>
+      <a href="opticas.html" class="btn btn--dark" style="margin-top:28px">Ver cómo funciona</a>
+    </div>
+    <div class="reveal">
+      <div class="quiz">
+        <span class="eyebrow" style="color:var(--teal)">Pruébalo ahora</span>
+        <h3 style="font-size:1.5rem;margin:10px 0 4px">Recomendador de lentes con IA</h3>
+        <p style="color:rgba(255,255,255,.75);font-size:.95rem">Responde 2 preguntas y mira la magia. Esto mismo vive en tu web y vende por ti.</p>
+        <div id="quiz-body" style="margin-top:18px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAND -->
+<section class="section--tight">
+  <div class="container">
+    <div class="band reveal">
+      <div><div class="n">US$ 295M</div><div class="l">tamaño del mercado óptico peruano</div></div>
+      <div><div class="n">+4.000</div><div class="l">ópticas independientes a las que servir</div></div>
+      <div><div class="n">~10%</div><div class="l">crecimiento anual del consumo</div></div>
+      <div><div class="n">24/7</div><div class="l">marketing y atención con IA</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AI CONTENT GALLERY -->
+<section class="section">
+  <div class="container">
+    <div class="shead center reveal">
+      <span class="eyebrow">Máquina de contenido con IA</span>
+      <h2>Contenido creado por inteligencia artificial</h2>
+      <p>Estas piezas fueron generadas automáticamente con IA para Kalevisión. Así trabaja el motor de contenido: crea y publica por ti, sin esfuerzo diario.</p>
+    </div>
+    <div class="gallery">
+      <div class="gcard reveal"><div class="img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_33CwvQIktHoBixUc2OshA9kXUz0/hf_20260628_182158_37887b8a-3417-4d4c-b9b8-cd21a79a72bc.png" alt="Post de marca generado por IA" loading="lazy"></div><div class="cap"><span class="aitag">IA</span> <span>Publicación de marca</span></div></div>
+      <div class="gcard reveal"><div class="img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_33CwvQIktHoBixUc2OshA9kXUz0/hf_20260628_182200_ad1e83b9-0738-4452-bd23-60fe670f1e9a.png" alt="Post de control de miopía generado por IA" loading="lazy"></div><div class="cap"><span class="aitag">IA</span> <span>Campaña control de miopía</span></div></div>
+      <div class="gcard reveal"><div class="img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_33CwvQIktHoBixUc2OshA9kXUz0/hf_20260628_184154_05dd2694-eabc-4de4-843e-78dcbc05ca34.png" alt="Lifestyle generado por IA" loading="lazy"></div><div class="cap"><span class="aitag">IA</span> <span>Pieza lifestyle</span></div></div>
+    </div>
+    <div class="center" style="margin-top:30px"><a href="maquina-contenido.html" class="btn btn--dark">Ver cómo funciona la máquina de contenido</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="ctaband reveal">
+      <span class="eyebrow" style="color:#fff">Da el primer paso</span>
+      <h2>El futuro de la óptica en Perú empieza hoy</h2>
+      <p>Ya seas una óptica que quiere crecer o un paciente buscando los mejores lentes, Kalevisión tiene la tecnología para ti.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="opticas.html" class="btn btn--primary">Soy óptica</a>
+        <a href="tienda.html" class="btn btn--ghost">Quiero mis lentes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:14px"><span class="brand__dot">◎</span>Kale<span style="color:var(--cyan)">visión</span></a>
+        <p style="font-size:.92rem;max-width:280px">Socio estratégico de PRATS en Perú. Lentes de calidad europea y crecimiento impulsado por inteligencia artificial.</p>
+        <div class="socials" style="margin-top:18px">
+          <a href="https://www.instagram.com/kale.vision/" target="_blank" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/61568410483796/" target="_blank" aria-label="Facebook">f</a>
+          <a href="#" aria-label="TikTok">♪</a>
+          <a href="#" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div><h4>Navegación</h4><a href="index.html">Inicio</a><a href="opticas.html">Para ópticas</a><a href="tienda.html">Tienda</a><a href="nosotros.html">Nosotros</a></div>
+      <div><h4>Productos</h4><a href="tienda.html">Lentes progresivos</a><a href="tienda.html">Control de miopía</a><a href="tienda.html">Monturas</a><a href="tienda.html">Lentes de sol</a></div>
+      <div><h4>Contacto</h4><a href="#">San Isidro, Lima, Perú</a><a href="contacto.html">Solicitar asesoría</a><a href="https://www.instagram.com/kale.vision/" target="_blank">@kale.vision</a></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Kalevisión · Demo de propuesta. Diseño y tecnología por RDC Group.</span>
+      <span>Calidad europea PRATS · Hecho en Perú con IA</span>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay" onclick="Cart.close()"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer__head"><h3>Tu carrito</h3><button class="btn btn--outline" onclick="Cart.close()" style="padding:6px 12px">✕</button></div>
+  <div class="drawer__body" id="cart-body"></div>
+  <div class="drawer__foot" id="cart-foot">
+    <div class="totalrow"><span>Total</span><span id="cart-total">S/ 0.00</span></div>
+    <button class="btn btn--primary btn--block" onclick="checkout()">Pagar ahora</button>
+    <p class="form-note" style="text-align:center;margin-top:10px">Pago seguro · Niubiz · Mercado Pago · Izipay</p>
+  </div>
+</aside>
+
+<button class="fab" onclick="aiAssistant()" aria-label="Asistente IA">🤖</button>
+<script src="app.js"></script>
+</body>
+</html>

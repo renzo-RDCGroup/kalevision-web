@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda · Kalevisión — Compra tus lentes europeos online</title>
+<meta name="description" content="Compra lentes oftálmicas, progresivos, monturas y lentes de sol de calidad europea PRATS. Recógelos en tienda o recíbelos en casa.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav"><div class="container nav__inner">
+  <a href="index.html" class="brand"><span class="brand__dot">◎</span>Kale<span>visión</span></a>
+  <nav class="navlinks" id="nav">
+    <a href="index.html">Inicio</a><a href="opticas.html">Para ópticas</a><a href="tienda.html" class="active">Tienda</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="nav__cta">
+    <button class="btn cart-btn btn--outline" onclick="Cart.open()">🛒<span class="cart-count">0</span></button>
+    <a href="contacto.html" class="btn btn--primary">Agendar cita</a>
+    <button class="burger" onclick="toggleNav()">☰</button>
+  </div>
+</div></header>
+
+<section class="phero"><div class="container phero__inner">
+  <div class="crumbs"><a href="index.html">Inicio</a> / Tienda</div>
+  <h1>Tus lentes ideales, calidad europea</h1>
+  <p>Compra online y recíbelos en casa, o recógelos en nuestra tienda de San Isidro. ¿No sabes cuáles elegir? Deja que nuestra IA te recomiende.</p>
+  <div style="display:flex;gap:14px;margin-top:24px;flex-wrap:wrap">
+    <a href="index.html#beneficios" class="btn btn--primary">🤖 Recomendador con IA</a>
+    <a href="#catalogo" class="btn btn--ghost">Ver catálogo</a>
+  </div>
+</div></section>
+
+<!-- TRUST BAR -->
+<section class="section--tight"><div class="container">
+  <div class="grid grid-4">
+    <div class="card reveal center"><div class="ico" style="margin:0 auto 12px">🚚</div><h3 style="font-size:1rem">Envío a todo Perú</h3></div>
+    <div class="card reveal center"><div class="ico" style="margin:0 auto 12px">🔬</div><h3 style="font-size:1rem">Tecnología PRATS</h3></div>
+    <div class="card reveal center"><div class="ico" style="margin:0 auto 12px">💳</div><h3 style="font-size:1rem">Paga en cuotas</h3></div>
+    <div class="card reveal center"><div class="ico" style="margin:0 auto 12px">🛡️</div><h3 style="font-size:1rem">Garantía europea</h3></div>
+  </div>
+</div></section>
+
+<!-- CATALOG -->
+<section class="section" id="catalogo"><div class="container">
+  <div class="shead center reveal"><span class="eyebrow">Catálogo</span><h2>Encuentra tus lentes</h2></div>
+  <div class="filters">
+    <button class="chip active" onclick="filterShop('all',this)">Todos</button>
+    <button class="chip" onclick="filterShop('progresivo',this)">Progresivos</button>
+    <button class="chip" onclick="filterShop('miopia',this)">Control miopía</button>
+    <button class="chip" onclick="filterShop('montura',this)">Monturas</button>
+    <button class="chip" onclick="filterShop('sol',this)">Lentes de sol</button>
+  </div>
+
+  <div class="shopgrid">
+    <div class="product reveal" data-cat="progresivo">
+      <div class="product__img">👓<span class="product__tag">Más vendido</span></div>
+      <div class="product__body"><div class="product__cat">Progresivo</div><h3>Vimax SE</h3>
+        <p class="muted" style="font-size:.9rem">Progresivo premium a la centésima de dioptría.</p>
+        <div class="product__row"><span class="price">S/ 690 <small>S/ 850</small></span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('Vimax SE',690,'👓')">Agregar</button></div>
+      </div>
+    </div>
+    <div class="product reveal" data-cat="progresivo">
+      <div class="product__img">🧠<span class="product__tag">IA</span></div>
+      <div class="product__body"><div class="product__cat">Progresivo</div><h3>Vimax Adaptative</h3>
+        <p class="muted" style="font-size:.9rem">Se adapta a ti con datos personalizados.</p>
+        <div class="product__row"><span class="price">S/ 890</span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('Vimax Adaptative',890,'🧠')">Agregar</button></div>
+      </div>
+    </div>
+    <div class="product reveal" data-cat="miopia">
+      <div class="product__img">👶<span class="product__tag">Niños</span></div>
+      <div class="product__body"><div class="product__cat">Control de miopía</div><h3>MYOP Kids</h3>
+        <p class="muted" style="font-size:.9rem">Frena el avance de la miopía infantil.</p>
+        <div class="product__row"><span class="price">S/ 750</span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('MYOP Kids',750,'👶')">Agregar</button></div>
+      </div>
+    </div>
+    <div class="product reveal" data-cat="progresivo">
+      <div class="product__img">💻</div>
+      <div class="product__body"><div class="product__cat">Ocupacional</div><h3>Vimax Office</h3>
+        <p class="muted" style="font-size:.9rem">Para pantallas, con filtro de luz azul.</p>
+        <div class="product__row"><span class="price">S/ 520</span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('Vimax Office',520,'💻')">Agregar</button></div>
+      </div>
+    </div>
+    <div class="product reveal" data-cat="montura">
+      <div class="product__img">🤓<span class="product__tag">Nuevo</span></div>
+      <div class="product__body"><div class="product__cat">Montura</div><h3>Montura Titanio Lima</h3>
+        <p class="muted" style="font-size:.9rem">Ligera, resistente y elegante.</p>
+        <div class="product__row"><span class="price">S/ 380</span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('Montura Titanio Lima',380,'🤓')">Agregar</button></div>
+      </div>
+    </div>
+    <div class="product reveal" data-cat="montura">
+      <div class="product__img">👓</div>
+      <div class="product__body"><div class="product__cat">Montura</div><h3>Montura Acetato Miraflores</h3>
+        <p class="muted" style="font-size:.9rem">Diseño moderno en acetato italiano.</p>
+        <div class="product__row"><span class="price">S/ 290</span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('Montura Acetato Miraflores',290,'👓')">Agregar</button></div>
+      </div>
+    </div>
+    <div class="product reveal" data-cat="sol">
+      <div class="product__img">🕶️<span class="product__tag">UV 100%</span></div>
+      <div class="product__body"><div class="product__cat">Lentes de sol</div><h3>Sol Polarizado Costa Verde</h3>
+        <p class="muted" style="font-size:.9rem">Protección UV total y antirreflejo.</p>
+        <div class="product__row"><span class="price">S/ 320</span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('Sol Polarizado Costa Verde',320,'🕶️')">Agregar</button></div>
+      </div>
+    </div>
+    <div class="product reveal" data-cat="sol">
+      <div class="product__img">🌗</div>
+      <div class="product__body"><div class="product__cat">Fotocromático</div><h3>Lente Fotocromático</h3>
+        <p class="muted" style="font-size:.9rem">Se oscurece solo al salir al sol.</p>
+        <div class="product__row"><span class="price">S/ 450</span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('Lente Fotocromático',450,'🌗')">Agregar</button></div>
+      </div>
+    </div>
+    <div class="product reveal" data-cat="miopia">
+      <div class="product__img">🔭</div>
+      <div class="product__body"><div class="product__cat">Monofocal</div><h3>Monofocal HD + Antirreflejo</h3>
+        <p class="muted" style="font-size:.9rem">Visión nítida para miopía o hipermetropía.</p>
+        <div class="product__row"><span class="price">S/ 240</span>
+          <button class="btn btn--primary" style="padding:10px 18px" onclick="Cart.add('Monofocal HD',240,'🔭')">Agregar</button></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- VIRTUAL TRY ON TEASER -->
+<section class="section" style="background:var(--paper)"><div class="container split">
+  <div class="reveal">
+    <span class="eyebrow">Próximamente · IA</span>
+    <h2>Pruébate los lentes con tu cámara</h2>
+    <p class="muted">Con realidad aumentada e IA, verás cómo te quedan las monturas antes de comprar. Menos dudas, más ventas, cero devoluciones.</p>
+    <a href="contacto.html" class="btn btn--dark" style="margin-top:22px">Avísame cuando esté listo</a>
+  </div>
+  <div class="reveal"><div class="imgband" style="min-height:300px">
+    <img src="https://d8j0ntlcm91z4.cloudfront.net/user_33CwvQIktHoBixUc2OshA9kXUz0/hf_20260628_184154_05dd2694-eabc-4de4-843e-78dcbc05ca34.png" alt="Persona con lentes" loading="lazy">
+    <div class="imgband__overlay"></div>
+    <div class="imgband__content"><div style="font-size:3rem">📸</div><p style="margin-top:8px;font-weight:700;font-size:1.1rem">Probador virtual con IA</p><p style="opacity:.85;font-size:.9rem">Demostración de la propuesta</p></div>
+  </div></div>
+</div></section>
+
+<footer class="footer"><div class="container">
+  <div class="footer__grid">
+    <div>
+      <a href="index.html" class="brand" style="margin-bottom:14px"><span class="brand__dot">◎</span>Kale<span style="color:var(--cyan)">visión</span></a>
+      <p style="font-size:.92rem;max-width:280px">Socio estratégico de PRATS en Perú. Lentes de calidad europea y crecimiento impulsado por IA.</p>
+      <div class="socials" style="margin-top:18px"><a href="https://www.instagram.com/kale.vision/" target="_blank">📷</a><a href="#">f</a><a href="#">♪</a><a href="#">💬</a></div>
+    </div>
+    <div><h4>Navegación</h4><a href="index.html">Inicio</a><a href="opticas.html">Para ópticas</a><a href="tienda.html">Tienda</a><a href="nosotros.html">Nosotros</a></div>
+    <div><h4>Productos</h4><a href="tienda.html">Progresivos</a><a href="tienda.html">Control de miopía</a><a href="tienda.html">Monturas</a><a href="tienda.html">Lentes de sol</a></div>
+    <div><h4>Contacto</h4><a href="#">San Isidro, Lima, Perú</a><a href="contacto.html">Solicitar asesoría</a><a href="https://www.instagram.com/kale.vision/" target="_blank">@kale.vision</a></div>
+  </div>
+  <div class="footer__bottom"><span>© 2026 Kalevisión · Demo de propuesta. Diseño y tecnología por RDC Group.</span><span>Calidad europea PRATS · Hecho en Perú con IA</span></div>
+</div></footer>
+
+<div class="overlay" id="overlay" onclick="Cart.close()"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer__head"><h3>Tu carrito</h3><button class="btn btn--outline" onclick="Cart.close()" style="padding:6px 12px">✕</button></div>
+  <div class="drawer__body" id="cart-body"></div>
+  <div class="drawer__foot" id="cart-foot"><div class="totalrow"><span>Total</span><span id="cart-total">S/ 0.00</span></div><button class="btn btn--primary btn--block" onclick="checkout()">Pagar ahora</button><p class="form-note" style="text-align:center;margin-top:10px">Pago seguro · Niubiz · Mercado Pago · Izipay</p></div>
+</aside>
+<button class="fab" onclick="aiAssistant()">🤖</button>
+<script src="app.js"></script>
+</body>
+</html>
