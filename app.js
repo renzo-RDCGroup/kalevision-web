@@ -43,7 +43,7 @@ function checkout(){
   if(Cart.items.length===0){ alert('Agrega productos antes de continuar.'); return; }
   const body=document.getElementById('cart-body');
   body.innerHTML=`<div style="text-align:center;padding:30px 10px">
-    <div style="font-size:2.6rem">✅</div>
+    <div><svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="#19c08a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9"/></svg></div>
     <h3 style="margin:10px 0;color:var(--navy)">¡Pedido confirmado!</h3>
     <p class="muted" style="font-size:.9rem">Demo: en la versión final el pago se procesa con Niubiz / Mercado Pago / Izipay y el pedido entra automáticamente al CRM.</p></div>`;
   document.getElementById('cart-foot').style.display='none';
@@ -120,7 +120,7 @@ const Quiz = {
 
 /* ---------- Asistente flotante (demo) ---------- */
 function aiAssistant(){
-  alert('🤖 Asistente IA de Kalevisión\n\nDemo: aquí se abriría un chatbot 24/7 que responde dudas, recomienda lentes, agenda citas y captura leads automáticamente hacia tu CRM — sin intervención humana.');
+  alert('Asistente IA de Kalevisión\n\nDemo: aquí se abriría un chatbot 24/7 que responde dudas, recomienda lentes, agenda citas y captura leads automáticamente hacia tu CRM — sin intervención humana.');
 }
 
 /* ---------- Animaciones al hacer scroll ---------- */
