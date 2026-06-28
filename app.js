@@ -13,8 +13,8 @@ function toggleNav(){
 /* ---------- Carrito (en memoria, demo) ---------- */
 const Cart = {
   items: [],
-  add(name, price, icon){
-    this.items.push({name, price, icon: icon||'\u{1F453}'});
+  add(name, price, img){
+    this.items.push({name, price, img: img||''});
     this.render();
     this.open();
   },
@@ -32,7 +32,7 @@ const Cart = {
     if(this.items.length===0){ body.innerHTML='<p class="muted" style="text-align:center;margin-top:30px">Tu carrito está vacío.</p>'; return; }
     body.innerHTML=this.items.map((x,i)=>`
       <div class="citem">
-        <div class="citem__img">${x.icon}</div>
+        <div class="citem__img">${x.img?`<img src="${x.img}" alt="">`:''}</div>
         <div><div class="citem__t">${x.name}</div><div class="citem__p">S/ ${x.price.toFixed(2)}</div></div>
         <button onclick="Cart.remove(${i})" aria-label="Quitar">&times;</button>
       </div>`).join('');
