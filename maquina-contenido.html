@@ -53,6 +53,29 @@ h1{font-family:'Satoshi','Sora';font-size:2.1rem;color:var(--navy);letter-spacin
 </style>
 </head>
 <body>
+<div id="rdcgate" style="position:fixed;inset:0;z-index:99999;background:#1A1B23;display:flex;align-items:center;justify-content:center;padding:24px;font-family:Inter,system-ui,-apple-system,sans-serif">
+  <div style="background:#fff;border-radius:18px;padding:30px 26px;max-width:340px;width:100%;text-align:center;box-shadow:0 20px 60px -20px rgba(0,0,0,.5)">
+    <div style="font-weight:800;font-size:1.5rem;color:#1A1B23;letter-spacing:-.02em;margin-bottom:4px">RDC<span style="color:#009FE3">Group</span></div>
+    <h2 style="font-size:1.15rem;margin:4px 0;color:#1A1B23">Acceso restringido</h2>
+    <p style="color:#52617A;font-size:.86rem;margin:6px 0 16px">Ingresa la contraseña para ver el sitio.</p>
+    <input id="rdcpw" type="password" placeholder="Contraseña" autocomplete="off" style="width:100%;padding:11px 13px;border:1.5px solid #E3EBF6;border-radius:10px;font:inherit;text-align:center;margin-bottom:10px;box-sizing:border-box">
+    <button id="rdcbtn" type="button" style="width:100%;padding:11px;border:none;border-radius:10px;background:#009FE3;color:#fff;font-weight:700;font-size:.95rem;cursor:pointer">Entrar</button>
+    <p id="rdcerr" style="color:#B00020;font-size:.8rem;min-height:1em;margin:8px 0 0"></p>
+  </div>
+</div>
+<script>
+(function(){
+  var PW="rocky";
+  function unlock(){var g=document.getElementById("rdcgate");if(g)g.style.display="none";try{sessionStorage.setItem("rdc_gate","1");}catch(e){}}
+  function check(){var v=(document.getElementById("rdcpw").value||"").trim().toLowerCase();if(v===PW){unlock();}else{document.getElementById("rdcerr").textContent="Contraseña incorrecta.";document.getElementById("rdcpw").value="";document.getElementById("rdcpw").focus();}}
+  document.addEventListener("DOMContentLoaded",function(){
+    try{if(sessionStorage.getItem("rdc_gate")==="1"){var g=document.getElementById("rdcgate");if(g)g.style.display="none";return;}}catch(e){}
+    var b=document.getElementById("rdcbtn");if(b)b.addEventListener("click",check);
+    var i=document.getElementById("rdcpw");if(i){i.addEventListener("keydown",function(ev){if(ev.key==="Enter")check();});i.focus();}
+  });
+})();
+</script>
+
 <div class="wrap">
   <a class="back" href="index.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg> Volver a Kalevisión</a>
   <span class="eyebrow">Pilar 2 · Propuesta Kalevisión</span>
